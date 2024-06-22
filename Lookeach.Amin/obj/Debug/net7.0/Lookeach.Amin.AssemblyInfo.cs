@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lookeach.Amin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35b3c4238583aef88a32711623e89292ff5637f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lookeach.Amin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lookeach.Amin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
