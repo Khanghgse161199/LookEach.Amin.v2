@@ -17,6 +17,7 @@ namespace Service.Services
         Task<List<User>> GetAllUser();
         Task<List<Category>> GetAllCategories();
         Task<List<Brand>> GetAllBrands();
+        Task<List<Product>> GetProductTopSales(int topOptions);
     }
     public class AdminService : IAdminService
     {
@@ -25,6 +26,13 @@ namespace Service.Services
         public AdminService()
         {
             _context = new LookeachContext();
+        }
+
+        public async Task<List<Product>> GetProductTopSales(int topOptions)
+        {
+            var products = await _context.Products.ToListAsync();
+            products = products.OrderByDescending(x => x.Sold).ToList();
+            return products.Take(topOptions).ToList();
         }
         public async Task<SuperAdmin> Login(string username, string password)
         => await _context.SuperAdmins.FirstOrDefaultAsync(x => x.Username == username && x.Password == password);
